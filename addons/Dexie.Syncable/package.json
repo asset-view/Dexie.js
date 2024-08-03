@@ -54,7 +54,7 @@
     ],
     "dexie-syncable": [
       "# Build UMD module and the tests (two bundles)",
-      "tsc --allowJs --moduleResolution node --lib es2015,dom -t es5 -m es2015 --outDir tools/tmp/es5 --rootDir ../.. --sourceMap src/Dexie.Syncable.js test/unit/unit-tests-all.js [--watch 'Compilation complete.']",
+      "tsc --allowJs --moduleResolution node --lib es2020,dom -t es5 -m es2015 --outDir tools/tmp/es5 --rootDir ../.. --sourceMap src/Dexie.Syncable.js test/unit/unit-tests-all.js [--watch 'Compilation complete.']",
       "rollup -c tools/build-configs/rollup.config.js",
       "rollup -c tools/build-configs/rollup.tests.config.js",
       "node tools/replaceVersionAndDate.js dist/dexie-syncable.js",
@@ -74,11 +74,11 @@
   },
   "homepage": "https://dexie.org",
   "peerDependencies": {
-    "dexie": "workspace:^3.0.2 || ^4.0.1-alpha.5",
+    "dexie": "workspace:^3.0.2 || ^4.0.1",
     "dexie-observable": "workspace:^"
   },
   "devDependencies": {
-    "dexie": "workspace:^3.0.2 || ^4.0.1-alpha.5",
+    "dexie": "workspace:^3.0.2 || ^4.0.1",
     "dexie-observable": "workspace:^",
     "eslint": "^5.16.0",
     "just-build": "^0.9.24",
